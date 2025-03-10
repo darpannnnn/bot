@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="/src/output.css" rel="stylesheet" />
+    <style>
+      span{
+        display: inline-block;
+      }
+
+      body{
+        font-family: 'Gotham', sans-serif; /* Apply Gotham font globally */
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 box-border w-full h-full bg-[#111]">
+
+    <div id="preloader-Container" class="fixed top-0 left-0 w-full h-screen bg-[#05df72] z-[2800]">
+      <div id="preloader" class="fixed w-[100dvw] h-[100dvh] bg-[#111] z-[2500] top-0 left-0"></div>
+    </div>
+    
+    <nav class="w-[100vw] h-[75px] flex items-center justify-between lg:justify-start lg:gap-[10px] pl-[2vw] pr-[2vw] pt-[0.4vw] z-[500] fixed top-0 left-0 bg-[#111]">
+      <div id="logo" class="h-full w-[75px]">
+          <a href="/index.html"><img src="/assets/logo.png" alt=""></a>
+      </div>
+
+      <div id="desktop-nav-links" class="h-[65%] w-[600px] hidden bg-[#05df72] rounded-[50px] lg:flex items-center ">
+        <div class="w-[200px] h-full flex items-center justify-center">
+          <a href="" class="w-full h-auto text-center">Security</a>
+        </div>
+        <div class="w-[200px] h-full flex items-center justify-center">
+          <a href="" class="w-full h-auto text-center">Support</a>
+        </div>
+        <div class="w-[200px] h-full flex items-center justify-center">
+          <a href="" class="w-full h-auto text-center">FAQs</a>
+        </div>
+      </div>
+
+      <div id="menu" class="absolute bg-[#111] p-[1vw] rounded-[50%] lg:hidden cursor-pointer top-[5%] right-[2%] z-[1000] overflow-hidden w-[65px] h-[65px]">
+          <div id="btnContainer" class="w-[80px] h-[65.5px] flex items-center justify-center relative top-[50%] left-[50%] z-[2] pointer-events-none translate-[-50%]">
+            <div id="btn-bars" class="w-[28%] h-[8%] absolute">
+              <div id="bar1" class="h-[2px] w-full absolute top-[0%] left-[50%] translate-[-50%] bg-[#fff]"></div>
+              <div id="bar2" class="h-[2px] w-full absolute top-[100%] left-[50%] translate-[-50%] bg-[#fff] rounded-[50px]"></div>
+            </div>
+          </div>
+      </div>
+
+      <aside  class="fixed bg-[#1c1d20] h-[100dvh] w-[100dvw] sm:w-[100dvw] md:w-[60vw] lg:w-[40vw] xl:w-[35vw] top-[0%] right-[-110%] z-[999] pr-[20px] pl-[20px] pt-[110.6px] pb-[50px] text-[#fff] flex flex-col justify-between">
+          <div id="part1" class="flex flex-col flex-wrap relative">
+            <h4 class="uppercase text-[10.5px] font-[450] mb-[28px] opacity-[0.5]">Navigation</h4>
+            <div id="line" class="w-[100%] h-[1px] bg-[#ffffff39] block"></div>
+            <ul id="links-wrap" class="w-full pt-[28px] pb-[28px] flex flex-col items-start relative">
+              <li class="w-full h-[72.8px] overflow-hidden">
+                <a href="#" class="w-full h-auto flex items-center justify-center">
+                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                    <span class="btn-txt-inner text-[46px]">
+                      Security
+                    </span>
+                    <span>
+                      <img class="arrow scale-0" src="/assets/arrow.svg" alt="">
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li class="w-full h-[72.8px] overflow-hidden">
+                <a href="#" class="w-full h-auto flex items-center justify-center">
+                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                    <span class="btn-txt-inner text-[46px] ">
+                      Support
+                    </span>
+                    <span>
+                      <img class="arrow scale-0" src="/assets/arrow.svg" alt="">
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li class="w-full h-[72.8px] overflow-hidden">
+                <a href="#" class="w-full h-auto flex items-center justify-center">
+                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                    <span class="btn-txt-inner text-[46px] ">
+                      FAQs
+                    </span>
+                    <span>
+                      <img class="arrow scale-0" src="/assets/arrow.svg" alt="">
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+      </aside>
+    </nav>
+
+    <main class="relative overflow-x-hidden">
+      <section id="page1" class="w-full h-screen object-cover overflow-hidden" >
+        <div id="heroContainer" class="relative w-full h-full flex items-end justify-start">
+          <div id="heroTxtContainer" class="w-full h-auto flex flex-col text-[#fff] pl-[5vw] pr-[6vw] pb-[23vw] lg:pb-[11vw]">
+                    <div id="topTxt" class="relative mb-[15px] ">
+                        <p class="italic font-light absolute mb-[1.5vw] top-0 xl:top-[137%] xl:left-[1%]"><span>Trusted</span> <span>by</span> <span>users</span> <span>name</span>
+                          <span id="Circles" class="relative w-[20px] h-[20px] ">
+                            <span id="circle1" class="w-[15px] h-[15px] bg-[#A7A7A7] z-[-1] rounded-[50%] absolute top-[48%] left-[0%]"></span>
+                            <span id="circle2" class="w-[15px] h-[15px] bg-[#fff] z-[1] rounded-[50%] absolute top-[0%] left-[36%]"></span>
+                            <span id="circle3" class="w-[15px] h-[15px] bg-[#A7A7A7] z-[2] rounded-[50%] absolute top-[48%] left-[68%]"></span>
+                        </span>
+                        </p>
+                        
+                    </div>
+                    <div id="mainHeading" class="text-[75px] lg:text-[150px] xl:text-[180px] 2xl:text-[200px]">
+                        <h1 class="font-bold overflow-hidden" >
+                            <span>Skull</span><span class="italic font-light">Bot</span>
+                        </h1>
+                    </div>
+                    <a href="" id="get-started-btn" class="h-[55px] w-[200px] lg:w-[250px] 2xl:w-[269px] bg-[#05df72] rounded-[50px] flex items-center justify-evenly gap-[10px] pr-[4vw] pl-[4vw] 2xl:pr-[3vw] 2xl:pl-[3vw] text-[#111] font-semibold relative overflow-hidden z-[3]">
+                        <p class="w-auto">Get Started</p>
+                        <img src="/assets/arrow.svg" alt="">
+                        <span id="btn-overlay" class="absolute bg-[#fff] bottom-[0%] left-[50%] translate-x-[-50%]  w-full h-0 z-[-1] rounded-[50%]"></span>
+                    </a>
+                    <div id="heroBottomTxt" class="pt-[2.5vw] pl-[1.2vw] pr-[1.5vw] text-justify text-[15px] overflow-hidden xl:text-[20px] "> 
+                        <p class="md:w-[600px] h-auto">
+                            <span class="italic text-[#05df72]">Fast.Free.</span> On-Chain Flex.”Stack memecoins, send crypto global with no fees, swap slick on Solana, trade perpetuals, and scan the real shit. All in your wallet, all straight fire.
+                        </p>
+                    </div>
+          </div>
+          <video autoplay muted loop id="bg-video" class="absolute z-[-1] w-full h-full  top-[0%] left-[0%] object-cover pointer-events-none hidden xl:block">
+            <source src="/assets/heroVid.mp4" type="video/mp4" class="w-full h-full ">
+          </video>
+        </div>
+      </section>
+
+      <section id="page2"
+         class="w-full min-h-[100vh] p-[4vw] flex flex-col items-center justify-evenly gap-[20px]" 
+         style="background: linear-gradient(338deg, rgba(15,119,67,1) 0%, #05df72 100%, rgba(15,119,67,1) 100%);">
+            <div id="block-Container" class="w-full h-[300px] flex flex-wrap items-center justify-start ">
+              <div id="txt-block" class="w-[460px] xl:w-[540px] pl-[2vw] h-auto pt-[4vw] xl:pt-[2vw] xl:ml-[13vw]">
+                <p class="font-light">Everything under 1 Bot</p>
+                <h2 class="text-[35px] md:text-[38px] lg:text-[43px] xl:text-[46px] font-light">From <span class="italic font-medium">Start to Finish</span> <br>
+                  WE’ve got you Covered</h2>
+              </div>
+              <!-- <div id="deposit-block" class="w-[330px] xl:w-[460px] 2xl:w-[504px] h-[180px] pt-[10px] pb-[10px] pl-[12.5px] pr-[12.5px] bg-[#fff] rounded-[15px] flex flex-col items-start justify-evenly">
+                <p class="text-[#3D7E62] text-[25px] mb-[5px]">Deposit &amp; Dip</p>
+                <p class="font-light text-[20px] text-justify">Deposit & Dip, Chain Style. SOL or memes, straight to the blockchain. Withdraw anytime — your call, no gatekeepers.
+                </p>
+              </div> -->
+            </div>
+            <div id="bottom-box-container" class="w-full h-auto flex flex-wrap items-center justify-evenly xl:justify-center gap-[23px] text-[#fff] xl:gap-[55px]">
+              <div id="box1" class="bg-[#3D7E62] p-[10px] w-[300px] h-[300px] rounded-[15px] xl:w-[360px] xl:h-[360px] flex flex-col items-center gap-[8px] justify-center">
+                <h1 class="w-full h-[50%] text-[35px] text-start leading-[1] font-semibold pl-[17.5px]">Paper Trade <br> Perps Like a <br> Pro</h1>
+                <p class="w-[95%] h-auto text-[15px] text-wrap font-light pl-[17.2px]">
+                  ”Test your memecoin game without dropping a dime. Paper trade perpetual contracts with virtual cash, stack skills, and get that edge for when you’re ready to play with real money. No risk, all reward—pure prep for the trenches.
+                </p>
+              </div>
+              <div id="box2" class="bg-[#fff] w-[300px] h-[300px] xl:w-[360px] xl:h-[360px] text-[#3D7E62] rounded-[15px] flex flex-col items-center justify-center gap-[8px] p-[10px]">
+                <h1 class="w-full h-[50%] text-[35px] text-start leading-[1] font-semibold pl-[17.5px]"> scan ca’s <br> like a <br> mfker</h1>
+                <p class="w-[95%] h-auto text-[15px] text-wrap font-light pl-[17.2px]">
+                  ”Drop a contract address and bam—every detail you need hits you like a truck. Liquidity, holders, stats—our data’s so dope, it’s basically a superpower. Stay ahead, trade smart, and flex on the competition.
+                </p>
+              </div>
+              <div id="box3" class="bg-[#fff] w-[300px] h-[300px] xl:w-[360px] xl:h-[360px] text-[#3D7E62] rounded-[15px] flex flex-col items-center gap-[8px] justify-center p-[10px]">
+                <h1 class="w-full h-[50%] text-[35px] text-start leading-[1] font-semibold pl-[17.5px]">Flex Your PnLs Like <br> a MFkn G</h1>
+                <p class="w-[95%] h-auto text-[15px] text-wrap font-light pl-[17.2px]">
+                  ”Show off your paper gains with sleek designs and savage vibes. Profit? Loss? Don’t matter—post it like a boss with sleep-worthy visuals that scream “I’m that guy.” Stack clout while you stack trades.
+                </p>
+              </div>
+            </div>
+      </section>
+
+      <section id="page3" class="w-full min-h-screen bg-[#000] bg-cover bg-center text-[#fff]">
+        <div id="svgicon" class="h-auto w-[340px] md:w-[380px] lg:w-[460px] 2xl:w-[50%] 2xl:h-[80px] relative">
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%]  right-[20%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[28%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[36%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[44%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[52%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[60%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%]  right-[68%] z-[2]"></span>
+          <span class="absolute w-[15px] h-[15px] 2xl:w-[35px] 2xl:h-[35px] bg-[#3D7E62] rounded-[50%] top-[30%] 2xl:top-[50%] right-[76%] z-[2]"></span>
+          <img src="/assets/strikeLine.svg" alt="" class="w-full ">
+        </div>
+        <div  class="flex flex-col lg:flex-row items-center justify-evenly">
+          <div class="w-full lg:w-[50%] h-[60%] lg:h-[75%] 2xl:h-[95%] p-[3vw] flex flex-col items-center justify-evenly gap-[15px]">
+            <div id="text-block" class="w-full h-auto p-[1.5vw] text-[45px] lg:text-[55px] xl:text-[65px]">
+              <h1>Your Crypto’s<br>Untouchable, Fr.</h1>
+            </div>
+            <div id="secret-salt" class="w-[95%] h-auto ">
+              <div class="bg-[#05df72] w-full xl:w-[95%] h-auto p-[2vw] lg:p-[1vw] rounded-[15px] mb-[8px] ">
+                <p class="text-center lg:text-[24px]">HMAC-SHA256 + secret salt</p>
+              </div>
+              <div class="flex justify-start items-center gap-[18px] pl-[2vw] lg:pl-[1vw]">
+                <span class="w-[15px] h-[15px] rounded-[50%] bg-[#05df72]"></span>
+                <p>seed phrase on lockdown, no hacks allowed.</p>
+              </div>
+            </div>
+            <div id="spins" class="w-[95%] h-auto ">
+              <div class="bg-[#05df72] w-full xl:w-[95%] h-auto p-[2vw] lg:p-[1vw] rounded-[15px] mb-[8px] ">
+                <p class="text-center lg:text-[24px]">100,000 SHA-256 spins</p>
+              </div>
+              <div class="flex justify-start items-center gap-[18px] pl-[2vw] lg:pl-[1vw]">
+                <span class="w-[15px] h-[15px] rounded-[50%] bg-[#05df72]"></span>
+                <p>brute-force losers cry, too hard to crack.</p>
+              </div>
+            </div>
+            <div id="encoding" class="w-[95%] h-auto ">
+              <div class="bg-[#05df72] w-full xl:w-[95%] h-auto p-[2vw] lg:p-[1vw] rounded-[15px] mb-[8px] ">
+                <p class="text-center lg:text-[24px]">Base58 encoding</p>
+              </div>
+              <div class="flex justify-start items-center gap-[18px] pl-[2vw] lg:pl-[1vw]">
+                <span class="w-[15px] h-[15px] rounded-[50%] bg-[#05df72]"></span>
+                <p>no typos, just clean moves.Top-tier tech, <br> zero cap—your bags stay safe.</p>
+              </div>
+            </div>
+          </div>
+          <img id="boySvg" src="/assets/boy.svg" alt="" class="h-[500px] lg:h-[550px] xl:h-[750px]">
+        </div>
+      </section>
+
+      <section id="page4" class="w-full h-screen flex flex-col items-center justify-evenly pt-[2vw] pb-[2vw]" style="background: linear-gradient(338deg, rgba(15,119,67,1) 0%, #05df72 100%, rgba(15,119,67,1) 100%);">
+            <div id="FAQ-container" class="w-full h-[80%] flex flex-col items-center justify-evenly gap-[15px] lg:flex-row">
+                <div id="Questions" class="w-full h-[70%] lg:w-[50%]  flex flex-col items-center lg:items-start  justify-evenly pl-[4vw] lg:text-[20px] xl:text-[25px]">
+                    <h2 class="text-[25px] lg:text-[30px] xl:text-[35px] font-medium">Frequently Asked Questions</h2>
+                    <a href="" class="font-light">How do I create a tip.cc wallet? </a>
+                    <a href="" class="font-light">Can I use my balance on a different servers? </a>
+                    <a href="" class="font-light">Are my funds safe?</a>
+                    <a href="" class="font-light text-center lg:text-start">What if the exchange rate of a cryptocurrency goes up or down? </a>
+                    <a href="" class="font-light">Can I exchange one cryptocurrency to another?</a>
+                    <a href="" class="font-light">Can I use the bot on chats without it installed?</a>
+                    <a href="" class="font-light">I received a tip, what can I do with it?</a>
+                </div>
+                <img src="/assets/boy.png" alt="" class="w-[300px] lg:w-[400px] xl:w-[500px] 2xl:w-[580px]">
+            </div>
+            <div id="telegram-bot" class="w-full h-[20%] flex flex-col items-center justify-evenly">
+                <h2 class="text-[25px] font-semibold xl:text-[30px]">Want the Bot in your chat?</h2>
+                <a href="" id="telegram-btn" class="bg-[#fff] w-[250px] h-[65px] xl:w-[300px] xl:h-[80px] flex items-center justify-center gap-[10px] rounded-[15px]">
+                    <img src="/assets/telegram.svg" class="h-[60%] xl:h-[60%]" alt="">
+                    <h3 class="font-semibold xl:text-[25px]">Get on Telegram</h3>
+                </a>
+            </div>
+      </section>
+
+      <footer class="bg-[#00753A] w-full h-[770px] xl:h-[600px] flex flex-col items-center justify-evenly pr-[2vw] pl-[2vw] pb-[2vw]">
+            <div id="footer-container" class="w-full h-auto flex flex-col xl:flex-row items-center justify-evenly xl:justify-between pt-[5vw] pb-[5vw] pr-[2vw] pl-[2vw]">
+                <div id="footer-part1" class="flex flex-col items-start justify-evenly w-full xl:w-[480px] 2xl:w-[500px]  h-[165px] pl-[1.5vw] pr-[1.5vw]">
+                    <a href="/index.html" id="btn" class="flex items-center justify-center bg-[#fff] w-[175px] rounded-[15px] pr-[8px]">
+                        <img src="/assets/logo.png" alt="" class="w-[50px] h-[50px]">
+                        <p class="text-[25px] font-semibold">
+                            Skull<span class="italic font-light">Bot</span>
+                        </p>
+                    </a>
+                    <p class="text-justify h-auto text-[15px] text-[#fff]">
+                        <span class="italic text-[#05df72]">Fast.Free.</span> On-Chain Flex.”Stack memecoins, send crypto global with no fees, swap slick on Solana, trade perpetuals, and scan the real shit. All in your wallet, all straight fire.
+                    </p>
+                </div>
+                <div id="footer-part2" class="w-full xl:w-[60%] h-auto text-[#fff] flex justify-evenly flex-wrap gap-[15px] xl:gap-[10px]">
+                    <div id="quick-links" class="w-[40%] lg:w-[25%] xl:w-[20%] h-[190px] bg-[#0D7842] rounded-[10px] flex flex-col items-center justify-evenly pt-[1.5vw] pb-[1.5vw]"> 
+                        <p class="font-semibold ">Quick Links</p>
+                        <a href="">Wallet</a>
+                        <a href="">Feature</a>
+                        <a href="">Security</a>
+                        <a href="">Support</a>
+                    </div>
+                    <div id="resources" class="w-[40%] lg:w-[25%] xl:w-[20%] h-[190px] bg-[#0D7842] rounded-[10px] flex flex-col items-center justify-evenly pt-[1.5vw] pb-[1.5vw]" >
+                        <p class="font-semibold ">Resources</p>
+                        <a href="">Documentation</a>
+                        <a href="">FAQ</a>
+                        <a href="">Legal</a>
+                    </div>
+                    <div id="socialLinks" class="w-[90%] lg:w-[25%] xl:w-[35%] h-[150px] bg-[#0D7842] rounded-[10px] pt-[3vw] pb-[3vw] pr-[2vw] pl-[2vw] flex flex-col items-start justify-start gap-[13px]">
+                        <p class="font-semibold ">Connect with us</p>
+                        <div id="links-Container" class="flex items-center justify-start gap-[10px]">
+                            <a href="" class="bg-[#44BF94] w-[40px] h-[40px] flex items-center justify-center rounded-[50%]">
+                              <img src="/assets/telegram2.svg" alt="">
+                            </a>
+                            <a href="" class="bg-[#44BF94] w-[40px] h-[40px] flex items-center justify-center rounded-[50%]">
+                              <img src="/assets/github.svg" alt="">
+                            </a>
+                            <a href="" class="bg-[#44BF94] w-[40px] h-[40px] flex items-center justify-center rounded-[50%]">
+                              <img src="/assets/email.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="strike" class="w-full h-[1px] bg-[#cec8c8] mb-[4vw]"></div>
+            <div id="footer-bottom" class="w-full h-[49px] bg-[#fff] rounded-[15px] flex items-center justify-center pl-[5px] pr-[5px]">
+                <p class="w-full text-center">&copy;<span id="year">2024</span> <span class="font-bold ">Skull<span class="italic font-normal">bot</span></span> All Rights reserved</p>
+            </div>
+      </footer> 
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
