@@ -339,7 +339,7 @@ gsap.from('#page4 #telegram-bot',{
     opacity: 0,
     scrollTrigger: {
         scroller: 'main', // Locomotive Scroll's container
-        trigger: '#page4 #discord-bot',
+        trigger: '#page4 #telegram-bot',
         // markers: true,
         start: 'top 99%',
         end:'top 99%',
