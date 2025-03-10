@@ -13,6 +13,26 @@
       body{
         font-family: 'Gotham', sans-serif; /* Apply Gotham font globally */
       }
+
+      @media(min-aspect-ratio:16/9) {
+        #bg-video{
+          width:100%;
+          height: auto;
+        }
+      }
+      
+      @media(max-aspect-ratio:16/9) {
+        #bg-video{
+          width:auto;
+          height: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #bg-video {
+          object-position: right center; /* Adjust the skull position for mobile */
+        }
+      }
     </style>
   </head>
   <body class="m-0 p-0 box-border w-full h-full bg-[#111]">
@@ -123,7 +143,7 @@
                         </p>
                     </div>
           </div>
-          <video autoplay muted loop id="bg-video" class="absolute z-[-1] w-full h-full  top-[0%] left-[0%] object-cover pointer-events-none hidden xl:block">
+          <video autoplay muted loop id="bg-video" class="absolute z-[-1] w-full h-full  top-[0%] left-[0%] object-cover pointer-events-none object-right">
             <source src="Assets/heroVid.mp4" type="video/mp4" class="w-full h-full ">
           </video>
         </div>
