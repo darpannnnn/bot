@@ -11,7 +11,7 @@
       }
 
       body{
-        font-family: 'Gotham' sans-serif; /* Apply Gotham font globally */
+        font-family: 'Gotham' 'sans-serif'; /* Apply the Gotham font */
       }
 
       @media(min-aspect-ratio:16/9) {
@@ -20,7 +20,6 @@
           height: auto;
         }
       }
-      
       @media(max-aspect-ratio:16/9) {
         #bg-video{
           width:auto;
@@ -59,91 +58,91 @@
       </div>
 
       <div id="menu" class="absolute bg-[#111] p-[1vw] rounded-[50%] lg:hidden cursor-pointer top-[5%] right-[2%] z-[1000] overflow-hidden w-[65px] h-[65px]">
-          <div id="btnContainer" class="w-[80px] h-[65.5px] flex items-center justify-center relative top-[50%] left-[50%] z-[2] pointer-events-none translate-[-50%]">
-            <div id="btn-bars" class="w-[28%] h-[8%] absolute">
-              <div id="bar1" class="h-[2px] w-full absolute top-[0%] left-[50%] translate-[-50%] bg-[#fff]"></div>
-              <div id="bar2" class="h-[2px] w-full absolute top-[100%] left-[50%] translate-[-50%] bg-[#fff] rounded-[50px]"></div>
-            </div>
-          </div>
+        <div id="btnContainer" class="w-[80px] h-[65.5px] flex items-center justify-center relative top-[50%] left-[50%] z-[2] pointer-events-none translate-[-50%]">
+        <div id="btn-bars" class="w-[28%] h-[8%] absolute">
+            <div id="bar1" class="h-[2px] w-full absolute top-[0%] left-[50%] translate-[-50%] bg-[#fff]"></div>
+            <div id="bar2" class="h-[2px] w-full absolute top-[100%] left-[50%] translate-[-50%] bg-[#fff] rounded-[50px]"></div>
+        </div>
+        </div>
       </div>
 
       <aside  class="fixed bg-[#1c1d20] h-[100dvh] w-[100dvw] sm:w-[100dvw] md:w-[60vw] lg:w-[40vw] xl:w-[35vw] top-[0%] right-[-110%] z-[999] pr-[20px] pl-[20px] pt-[110.6px] pb-[50px] text-[#fff] flex flex-col justify-between">
-          <div id="part1" class="flex flex-col flex-wrap relative">
-            <h4 class="uppercase text-[10.5px] font-[450] mb-[28px] opacity-[0.5]">Navigation</h4>
-            <div id="line" class="w-[100%] h-[1px] bg-[#ffffff39] block"></div>
-            <ul id="links-wrap" class="w-full pt-[28px] pb-[28px] flex flex-col items-start relative">
-              <li class="w-full h-[72.8px] overflow-hidden">
-                <a href="#" class="w-full h-auto flex items-center justify-center">
-                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
-                    <span class="btn-txt-inner text-[46px]">
-                      Security
-                    </span>
-                    <span>
-                      <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li class="w-full h-[72.8px] overflow-hidden">
-                <a href="#" class="w-full h-auto flex items-center justify-center">
-                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
-                    <span class="btn-txt-inner text-[46px] ">
-                      Support
-                    </span>
-                    <span>
-                      <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li class="w-full h-[72.8px] overflow-hidden">
-                <a href="#" class="w-full h-auto flex items-center justify-center">
-                  <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
-                    <span class="btn-txt-inner text-[46px] ">
-                      FAQs
-                    </span>
-                    <span>
-                      <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
-                    </span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div id="part1" class="flex flex-col flex-wrap relative">
+        <h4 class="uppercase text-[10.5px] font-[450] mb-[28px] opacity-[0.5]">Navigation</h4>
+        <div id="line" class="w-[100%] h-[1px] bg-[#ffffff39] block"></div>
+        <ul id="links-wrap" class="w-full pt-[28px] pb-[28px] flex flex-col items-start relative">
+            <li class="w-full h-[72.8px] overflow-hidden">
+            <a href="#" class="w-full h-auto flex items-center justify-center">
+                <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                <span class="btn-txt-inner text-[46px]">
+                    Security
+                </span>
+                <span>
+                    <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
+                </span>
+                </span>
+            </a>
+            </li>
+            <li class="w-full h-[72.8px] overflow-hidden">
+            <a href="#" class="w-full h-auto flex items-center justify-center">
+                <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                <span class="btn-txt-inner text-[46px] ">
+                    Support
+                </span>
+                <span>
+                    <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
+                </span>
+                </span>
+            </a>
+            </li>
+            <li class="w-full h-[72.8px] overflow-hidden">
+            <a href="#" class="w-full h-auto flex items-center justify-center">
+                <span class="btn-txt w-full h-full  flex items-center justify-between pl-[12px] pr-[18px] ">
+                <span class="btn-txt-inner text-[46px] ">
+                    FAQs
+                </span>
+                <span>
+                    <img class="arrow scale-0" src="Assets/arrow.svg" alt="">
+                </span>
+                </span>
+            </a>
+            </li>
+        </ul>
+        </div>
       </aside>
     </nav>
 
     <main class="relative overflow-x-hidden">
       <section id="page1" class="w-full h-screen object-cover overflow-hidden" >
         <div id="heroContainer" class="relative w-full h-full flex items-end justify-start">
-          <div id="heroTxtContainer" class="w-full h-auto flex flex-col text-[#fff] pl-[5vw] pr-[6vw] pb-[23vw] lg:pb-[11vw] relative">
+          <div id="heroTxtContainer" class="w-full h-auto flex flex-col text-[#fff] pl-[5vw] pr-[6vw] pb-[23vw] lg:pb-[11vw] relative ">
             <div id="topTxt" class="absolute top-[-3.4%] left-[5.5%] sm:top-[-3%] sm:left-[5.9%] md:top-[-2%] md:left-[5.5%] lg:top-[5.5%] lg:left-[6.5%] xl:top-[5%] xl:left-[6%]">
               <p class="italic font-light"><span>Trusted</span> <span>by</span> <span>users</span> <span>name</span>
                 <span id="Circles" class="relative w-[20px] h-[20px] ">
                   <span id="circle1" class="w-[15px] h-[15px] bg-[#A7A7A7] z-[-1] rounded-[50%] absolute top-[48%] left-[0%]"></span>
                   <span id="circle2" class="w-[15px] h-[15px] bg-[#fff] z-[1] rounded-[50%] absolute top-[0%] left-[36%]"></span>
                   <span id="circle3" class="w-[15px] h-[15px] bg-[#A7A7A7] z-[2] rounded-[50%] absolute top-[48%] left-[68%]"></span>
-                </span>
+              </span>
               </p>
             </div>
             <div id="mainHeading" class="text-[75px] md:text-[90px] lg:text-[150px] xl:text-[180px] 2xl:text-[200px]">
-                <h1 class="font-bold overflow-hidden" >
-                    <span>Skull</span><span class="italic font-light">Bot</span>
-                </h1>
+              <h1 class="font-bold overflow-hidden" >
+                <span>Skull</span><span class="italic font-light">Bot</span>
+              </h1>
             </div>
             <a href="" id="get-started-btn" class="h-[55px] w-[200px] lg:w-[250px] 2xl:w-[269px] bg-[#05df72] rounded-[50px] flex items-center justify-evenly gap-[10px] pr-[4vw] pl-[4vw] 2xl:pr-[3vw] 2xl:pl-[3vw] text-[#111] font-semibold relative overflow-hidden z-[3]">
                 <p class="w-auto">Get Started</p>
                 <img src="Assets/arrow.svg" alt="">
                 <span id="btn-overlay" class="absolute bg-[#fff] bottom-[0%] left-[50%] translate-x-[-50%]  w-full h-0 z-[-1] rounded-[50%]"></span>
             </a>
-            <div id="heroBottomTxt" class="pt-[1.5vw] pl-[0.4vw] pr-[1.5vw] text-justify text-[15px] overflow-hidden xl:text-[20px] "> 
+            <div id="heroBottomTxt" class="pt-[2.5vw] pl-[1.2vw] pr-[1.5vw] text-justify text-[15px] overflow-hidden xl:text-[20px] "> 
                 <p class="md:w-[600px] h-auto">
                     <span class="italic text-[#05df72]">Fast.Free.</span> On-Chain Flex.”Stack memecoins, send crypto global with no fees, swap slick on Solana, trade perpetuals, and scan the real shit. All in your wallet, all straight fire.
                 </p>
             </div>
           </div>
-          <video autoplay muted id="bg-video" class="absolute z-[-1] w-full h-full  top-[0%] left-[0%] object-cover pointer-events-none object-right">
-            <source src="Assets/heroVidMain.mp4" type="video/mp4" class="w-full h-full ">
+          <video autoplay muted loop id="bg-video" class="absolute z-[-1] w-full h-full  top-[0%] left-[0%] object-right object-cover pointer-events-none ">
+            <source src="Assets/heroVid.mp4" type="video/mp4" class="w-full h-full ">
           </video>
         </div>
       </section>
